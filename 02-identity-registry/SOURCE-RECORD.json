@@ -1,0 +1,17 @@
+{
+  "record_type": "SOURCE_FREEZE",
+  "release": "LaborCoin Revision 7.2",
+  "order": 2,
+  "folder": "02-identity-registry",
+  "contract": "LaborCoinIdentityRegistryV1",
+  "version": "Identity Registry V1.0.1",
+  "source_sha256": "ac25972e24d7bc160db63de062deaf77d8f8a870a7408a48a512c1bb2b398d38",
+  "remix_source_sha256": "16a331fd97688d76e3f1d9a4bfb279fbe0f31db2549ea26c2df738106cca5d3c",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "expected_artifacts": {
+    "artifact": "LaborCoinIdentityRegistryV1.json",
+    "metadata": "LaborCoinIdentityRegistryV1_metadata.json",
+    "build_info": "LaborCoinIdentityRegistryV1.build-info.json",
+    "sealed_record": "LaborCoinIdentityRegistryV1-Compilation-Record.zip"
+  }
+}

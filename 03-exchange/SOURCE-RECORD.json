@@ -1,0 +1,17 @@
+{
+  "record_type": "SOURCE_FREEZE",
+  "release": "LaborCoin Revision 7.2",
+  "order": 3,
+  "folder": "03-exchange",
+  "contract": "LaborCoinExchangeV7",
+  "version": "Exchange V7.0.0",
+  "source_sha256": "26b3eae5c661a7623710379302deca834392f937a1b1e031c874c52131e340f4",
+  "remix_source_sha256": "f1e4550d634e5060b71f59c296545e074861e4eea290844eecff317dfecd3fa3",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "expected_artifacts": {
+    "artifact": "LaborCoinExchangeV7.json",
+    "metadata": "LaborCoinExchangeV7_metadata.json",
+    "build_info": "LaborCoinExchangeV7.build-info.json",
+    "sealed_record": "LaborCoinExchangeV7-Compilation-Record.zip"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "record_type": "SOURCE_FREEZE",
+  "release": "LaborCoin Revision 7.2",
+  "order": 4,
+  "folder": "04-token",
+  "contract": "LaborCoinV4",
+  "version": "LABR V4.0.0",
+  "source_sha256": "53b02c262af296c13ce38629f4c3ede6775f2a7f1d8f00a2ad0452b4c1f4fb52",
+  "remix_source_sha256": "40a939523ae6a7ec67c0c82409e3762de7859f05f61e9faebf612b99d69adc2a",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "expected_artifacts": {
+    "artifact": "LaborCoinV4.json",
+    "metadata": "LaborCoinV4_metadata.json",
+    "build_info": "LaborCoinV4.build-info.json",
+    "sealed_record": "LaborCoinV4-Compilation-Record.zip"
+  }
+}

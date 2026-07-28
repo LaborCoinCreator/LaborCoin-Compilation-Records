@@ -1,0 +1,14 @@
+# Local environment and generated caches
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Solidity tool output not used as final records
+out/
+cache/
+broadcast/
+node_modules/

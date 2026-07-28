@@ -1,0 +1,17 @@
+{
+  "record_type": "SOURCE_FREEZE",
+  "release": "LaborCoin Revision 7.2",
+  "order": 1,
+  "folder": "01-policy",
+  "contract": "LaborCoinProposalTextPolicyV1",
+  "version": "Policy V1.0.1",
+  "source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
+  "remix_source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "expected_artifacts": {
+    "artifact": "LaborCoinProposalTextPolicyV1.json",
+    "metadata": "LaborCoinProposalTextPolicyV1_metadata.json",
+    "build_info": "LaborCoinProposalTextPolicyV1.build-info.json",
+    "sealed_record": "LaborCoinProposalTextPolicyV1-Compilation-Record.zip"
+  }
+}

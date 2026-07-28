@@ -1,0 +1,222 @@
+{
+  "manifest_format_version": 2,
+  "release": "LaborCoin Revision 7.2",
+  "status": "PRECOMPILATION_SOURCE_FREEZE",
+  "source_repository": {
+    "url": "https://github.com/LaborCoinCreator/LaborCoin",
+    "release_path": "release/revision-7.2-source-freeze",
+    "source_manifest_sha256": "7074da07efc2c51027808bec8a0da14cda1cc9b5a2898efb82f94562f44b2222",
+    "source_freeze_commit": "9b0d304c591dd09717cd930a6cc32f6b66de97d3"
+  },
+  "compiler": {
+    "language": "Solidity",
+    "compiler": "0.8.36+commit.8a079791",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "prague",
+    "viaIR": false,
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "openzeppelin": "5.6.1",
+    "network": {
+      "name": "Polygon Mainnet",
+      "chainId": 137
+    }
+  },
+  "source_root": "active numbered component folders",
+  "artifact_status": "PENDING_USER_COMPILATION",
+  "contracts": [
+    {
+      "order": 1,
+      "folder": "01-policy",
+      "contract": "LaborCoinProposalTextPolicyV1",
+      "version": "Policy V1.0.1",
+      "source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
+      "remix_source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
+      "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+      "source_record_sha256": "d3dc2fab470c6b2273def14d5b61876573f224f72e147fbda771a7c3fd0a0c72",
+      "artifacts": {
+        "artifact": "LaborCoinProposalTextPolicyV1.json",
+        "metadata": "LaborCoinProposalTextPolicyV1_metadata.json",
+        "build_info": "LaborCoinProposalTextPolicyV1.build-info.json",
+        "sealed_record": "LaborCoinProposalTextPolicyV1-Compilation-Record.zip"
+      },
+      "status": "PENDING_COMPILATION",
+      "artifact_sha256": "PENDING",
+      "metadata_sha256": "PENDING",
+      "build_info_sha256": "PENDING",
+      "compilation_record_sha256": "PENDING",
+      "sealed_record_sha256": "PENDING",
+      "creation_bytecode_bytes": "PENDING",
+      "runtime_template_bytes": "PENDING",
+      "creation_bytecode_keccak256": "PENDING",
+      "runtime_template_keccak256": "PENDING",
+      "compiler_diagnostics": "PENDING"
+    },
+    {
+      "order": 2,
+      "folder": "02-identity-registry",
+      "contract": "LaborCoinIdentityRegistryV1",
+      "version": "Identity Registry V1.0.1",
+      "source_sha256": "ac25972e24d7bc160db63de062deaf77d8f8a870a7408a48a512c1bb2b398d38",
+      "remix_source_sha256": "16a331fd97688d76e3f1d9a4bfb279fbe0f31db2549ea26c2df738106cca5d3c",
+      "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+      "source_record_sha256": "e7bf0a8e4346be706a03bf109d80103bdd60255bce49d2beadd820bbbf4bd28e",
+      "artifacts": {
+        "artifact": "LaborCoinIdentityRegistryV1.json",
+        "metadata": "LaborCoinIdentityRegistryV1_metadata.json",
+        "build_info": "LaborCoinIdentityRegistryV1.build-info.json",
+        "sealed_record": "LaborCoinIdentityRegistryV1-Compilation-Record.zip"
+      },
+      "status": "PENDING_COMPILATION",
+      "artifact_sha256": "PENDING",
+      "metadata_sha256": "PENDING",
+      "build_info_sha256": "PENDING",
+      "compilation_record_sha256": "PENDING",
+      "sealed_record_sha256": "PENDING",
+      "creation_bytecode_bytes": "PENDING",
+      "runtime_template_bytes": "PENDING",
+      "creation_bytecode_keccak256": "PENDING",
+      "runtime_template_keccak256": "PENDING",
+      "compiler_diagnostics": "PENDING"
+    },
+    {
+      "order": 3,
+      "folder": "03-exchange",
+      "contract": "LaborCoinExchangeV7",
+      "version": "Exchange V7.0.0",
+      "source_sha256": "26b3eae5c661a7623710379302deca834392f937a1b1e031c874c52131e340f4",
+      "remix_source_sha256": "f1e4550d634e5060b71f59c296545e074861e4eea290844eecff317dfecd3fa3",
+      "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+      "source_record_sha256": "7ccaa41082cb30327e55552bfd7af7fc8ea9af919cf20650e58cdebbbfeda8e0",
+      "artifacts": {
+        "artifact": "LaborCoinExchangeV7.json",
+        "metadata": "LaborCoinExchangeV7_metadata.json",
+        "build_info": "LaborCoinExchangeV7.build-info.json",
+        "sealed_record": "LaborCoinExchangeV7-Compilation-Record.zip"
+      },
+      "status": "PENDING_COMPILATION",
+      "artifact_sha256": "PENDING",
+      "metadata_sha256": "PENDING",
+      "build_info_sha256": "PENDING",
+      "compilation_record_sha256": "PENDING",
+      "sealed_record_sha256": "PENDING",
+      "creation_bytecode_bytes": "PENDING",
+      "runtime_template_bytes": "PENDING",
+      "creation_bytecode_keccak256": "PENDING",
+      "runtime_template_keccak256": "PENDING",
+      "compiler_diagnostics": "PENDING"
+    },
+    {
+      "order": 4,
+      "folder": "04-token",
+      "contract": "LaborCoinV4",
+      "version": "LABR V4.0.0",
+      "source_sha256": "53b02c262af296c13ce38629f4c3ede6775f2a7f1d8f00a2ad0452b4c1f4fb52",
+      "remix_source_sha256": "40a939523ae6a7ec67c0c82409e3762de7859f05f61e9faebf612b99d69adc2a",
+      "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+      "source_record_sha256": "b9d4288e70ab04f7ca2a6ee52886b386e227d29965e97802eb6e6720b5de71f1",
+      "artifacts": {
+        "artifact": "LaborCoinV4.json",
+        "metadata": "LaborCoinV4_metadata.json",
+        "build_info": "LaborCoinV4.build-info.json",
+        "sealed_record": "LaborCoinV4-Compilation-Record.zip"
+      },
+      "status": "PENDING_COMPILATION",
+      "artifact_sha256": "PENDING",
+      "metadata_sha256": "PENDING",
+      "build_info_sha256": "PENDING",
+      "compilation_record_sha256": "PENDING",
+      "sealed_record_sha256": "PENDING",
+      "creation_bytecode_bytes": "PENDING",
+      "runtime_template_bytes": "PENDING",
+      "creation_bytecode_keccak256": "PENDING",
+      "runtime_template_keccak256": "PENDING",
+      "compiler_diagnostics": "PENDING"
+    },
+    {
+      "order": 5,
+      "folder": "05-labrv",
+      "contract": "LaborVoteV9",
+      "version": "LaborVote V9.1.1",
+      "source_sha256": "669a8e59815c91608034ddc54cc35214190933550c4f45e1644c6dc98bdceda7",
+      "remix_source_sha256": "1e651254c28b5a5cc1aa5afc9c79eee86c97b05c3cde7c5c6092bc103d66cc79",
+      "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+      "source_record_sha256": "57bb536d5011f551b09251b3c6affba11d7cecf1908e3b2cb4e40369c4562bbe",
+      "artifacts": {
+        "artifact": "LaborVoteV9.json",
+        "metadata": "LaborVoteV9_metadata.json",
+        "build_info": "LaborVoteV9.build-info.json",
+        "sealed_record": "LaborVoteV9-Compilation-Record.zip"
+      },
+      "status": "PENDING_COMPILATION",
+      "artifact_sha256": "PENDING",
+      "metadata_sha256": "PENDING",
+      "build_info_sha256": "PENDING",
+      "compilation_record_sha256": "PENDING",
+      "sealed_record_sha256": "PENDING",
+      "creation_bytecode_bytes": "PENDING",
+      "runtime_template_bytes": "PENDING",
+      "creation_bytecode_keccak256": "PENDING",
+      "runtime_template_keccak256": "PENDING",
+      "compiler_diagnostics": "PENDING"
+    },
+    {
+      "order": 6,
+      "folder": "06-registration",
+      "contract": "LaborCoinRegistrationV6",
+      "version": "Registration V6.1.1",
+      "source_sha256": "1ea6a752f328e61817a3bb2d1e192b7a96ecb45b86ad4ad8d10f4b247a637a28",
+      "remix_source_sha256": "f180a90b1ca4b6c89365c55f3eb6d63aa0215407c0677b644aa72161d2ab9836",
+      "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+      "source_record_sha256": "70370f7aff06a3eefe9ffe1080b2820ee8ab196ca344f7de6cb6b4b9115a6b02",
+      "artifacts": {
+        "artifact": "LaborCoinRegistrationV6.json",
+        "metadata": "LaborCoinRegistrationV6_metadata.json",
+        "build_info": "LaborCoinRegistrationV6.build-info.json",
+        "sealed_record": "LaborCoinRegistrationV6-Compilation-Record.zip"
+      },
+      "status": "PENDING_COMPILATION",
+      "artifact_sha256": "PENDING",
+      "metadata_sha256": "PENDING",
+      "build_info_sha256": "PENDING",
+      "compilation_record_sha256": "PENDING",
+      "sealed_record_sha256": "PENDING",
+      "creation_bytecode_bytes": "PENDING",
+      "runtime_template_bytes": "PENDING",
+      "creation_bytecode_keccak256": "PENDING",
+      "runtime_template_keccak256": "PENDING",
+      "compiler_diagnostics": "PENDING"
+    },
+    {
+      "order": 7,
+      "folder": "07-governance",
+      "contract": "LaborCoinGovernanceV15",
+      "version": "Governance V15.1.1",
+      "source_sha256": "e3ac031b02e817724bcd38f5069158fe02089bca28dacf6227acd9e68a6c5436",
+      "remix_source_sha256": "407d315a4dfc0b24d221155d08e633c56e7d2a39db6d48104430ab3ddddcbbfd",
+      "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+      "source_record_sha256": "b3a02d59cb1a8f29a3b63ccaec082b5c9bc8713b964d0994749f57612ae2be49",
+      "artifacts": {
+        "artifact": "LaborCoinGovernanceV15.json",
+        "metadata": "LaborCoinGovernanceV15_metadata.json",
+        "build_info": "LaborCoinGovernanceV15.build-info.json",
+        "sealed_record": "LaborCoinGovernanceV15-Compilation-Record.zip"
+      },
+      "status": "PENDING_COMPILATION",
+      "artifact_sha256": "PENDING",
+      "metadata_sha256": "PENDING",
+      "build_info_sha256": "PENDING",
+      "compilation_record_sha256": "PENDING",
+      "sealed_record_sha256": "PENDING",
+      "creation_bytecode_bytes": "PENDING",
+      "runtime_template_bytes": "PENDING",
+      "creation_bytecode_keccak256": "PENDING",
+      "runtime_template_keccak256": "PENDING",
+      "compiler_diagnostics": "PENDING"
+    }
+  ]
+}

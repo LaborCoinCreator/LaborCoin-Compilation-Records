@@ -1,0 +1,17 @@
+{
+  "record_type": "SOURCE_FREEZE",
+  "release": "LaborCoin Revision 7.2",
+  "order": 6,
+  "folder": "06-registration",
+  "contract": "LaborCoinRegistrationV6",
+  "version": "Registration V6.1.1",
+  "source_sha256": "1ea6a752f328e61817a3bb2d1e192b7a96ecb45b86ad4ad8d10f4b247a637a28",
+  "remix_source_sha256": "f180a90b1ca4b6c89365c55f3eb6d63aa0215407c0677b644aa72161d2ab9836",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "expected_artifacts": {
+    "artifact": "LaborCoinRegistrationV6.json",
+    "metadata": "LaborCoinRegistrationV6_metadata.json",
+    "build_info": "LaborCoinRegistrationV6.build-info.json",
+    "sealed_record": "LaborCoinRegistrationV6-Compilation-Record.zip"
+  }
+}

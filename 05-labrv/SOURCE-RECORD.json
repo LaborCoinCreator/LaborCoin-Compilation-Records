@@ -1,0 +1,17 @@
+{
+  "record_type": "SOURCE_FREEZE",
+  "release": "LaborCoin Revision 7.2",
+  "order": 5,
+  "folder": "05-labrv",
+  "contract": "LaborVoteV9",
+  "version": "LaborVote V9.1.1",
+  "source_sha256": "669a8e59815c91608034ddc54cc35214190933550c4f45e1644c6dc98bdceda7",
+  "remix_source_sha256": "1e651254c28b5a5cc1aa5afc9c79eee86c97b05c3cde7c5c6092bc103d66cc79",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "expected_artifacts": {
+    "artifact": "LaborVoteV9.json",
+    "metadata": "LaborVoteV9_metadata.json",
+    "build_info": "LaborVoteV9.build-info.json",
+    "sealed_record": "LaborVoteV9-Compilation-Record.zip"
+  }
+}
