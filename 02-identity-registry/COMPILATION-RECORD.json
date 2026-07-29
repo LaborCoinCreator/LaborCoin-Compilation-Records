@@ -1,0 +1,47 @@
+{
+  "record_format_version": 2,
+  "status": "RECORDED_PREDEPLOYMENT",
+  "release": "LaborCoin Revision 7.2",
+  "contract": "LaborCoinIdentityRegistryV1",
+  "version": "Identity Registry V1.0.1",
+  "folder": "02-identity-registry",
+  "source_sha256": "ac25972e24d7bc160db63de062deaf77d8f8a870a7408a48a512c1bb2b398d38",
+  "remix_source_sha256": "16a331fd97688d76e3f1d9a4bfb279fbe0f31db2549ea26c2df738106cca5d3c",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "source_record_sha256": "e7bf0a8e4346be706a03bf109d80103bdd60255bce49d2beadd820bbbf4bd28e",
+  "artifact_sha256": "6dece5de9d996f32898c7172fd842969e302986bc0ab5f4211305892f6d19ef4",
+  "metadata_sha256": "b6209cbc6f272d2d95b4ff1353b09a12159232114de2ae5c46c3fbce887098a0",
+  "build_info_sha256": "715878f0328708927852b14c0eea1f3608ec420fc29af755c8c7c3ff39d86038",
+  "creation_bytecode_bytes": 4519,
+  "runtime_template_bytes": 4205,
+  "creation_bytecode_keccak256": "0xd527c177dd00b6bf0b0e2d4f11ee7b2f9526b3f104903be495d53cdd623dedf3",
+  "runtime_template_keccak256": "0xeb91e07b32b2db5a07771c55af242e8bd1eb02e0bcaaeaec0ec356c09c67e0ff",
+  "compiler_diagnostics": "WARNINGS_RECORDED:5",
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "type": "Warning",
+      "message": "Warning: \"error\" will be promoted to keyword in the future and will not be allowed as an identifier anymore.\n   --> https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.6.1/contracts/utils/cryptography/ECDSA.sol:125:29:\n    |\n125 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, signature);\n    |                             ^^^^^^^^^^^^^^^^^^\n\n"
+    },
+    {
+      "severity": "warning",
+      "type": "Warning",
+      "message": "Warning: \"error\" will be promoted to keyword in the future and will not be allowed as an identifier anymore.\n   --> https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.6.1/contracts/utils/cryptography/ECDSA.sol:134:29:\n    |\n134 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecoverCalldata(hash, signature);\n    |                             ^^^^^^^^^^^^^^^^^^\n\n"
+    },
+    {
+      "severity": "warning",
+      "type": "Warning",
+      "message": "Warning: \"error\" will be promoted to keyword in the future and will not be allowed as an identifier anymore.\n   --> https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.6.1/contracts/utils/cryptography/ECDSA.sol:161:29:\n    |\n161 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, r, vs);\n    |                             ^^^^^^^^^^^^^^^^^^\n\n"
+    },
+    {
+      "severity": "warning",
+      "type": "Warning",
+      "message": "Warning: \"error\" will be promoted to keyword in the future and will not be allowed as an identifier anymore.\n   --> https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.6.1/contracts/utils/cryptography/ECDSA.sol:203:29:\n    |\n203 |         (address recovered, RecoverError error, bytes32 errorArg) = tryRecover(hash, v, r, s);\n    |                             ^^^^^^^^^^^^^^^^^^\n\n"
+    },
+    {
+      "severity": "warning",
+      "type": "Warning",
+      "message": "Warning: \"error\" will be promoted to keyword in the future and will not be allowed as an identifier anymore.\n   --> https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.6.1/contracts/utils/cryptography/ECDSA.sol:273:26:\n    |\n273 |     function _throwError(RecoverError error, bytes32 errorArg) private pure {\n    |                          ^^^^^^^^^^^^^^^^^^\n\n"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ from manifest_tools import (
     required_zip_members,
     sha256_file,
     validate_build_profile,
+    validate_compiler_input_source,
 )
 
 ROOT = Path(__file__).resolve().parent
@@ -110,10 +111,13 @@ for entry in contracts:
 
     try:
         artifact = load_json(artifact_paths["artifact"])
-        load_json(artifact_paths["metadata"])
+        metadata = load_json(artifact_paths["metadata"])
         build_info = load_json(artifact_paths["build_info"])
         record = load_json(record_path)
         validate_build_profile(build_info)
+        validate_compiler_input_source(
+            build_info, metadata, remix_source, contract
+        )
         diagnostic_status, diagnostics = compiler_diagnostics(build_info)
     except ValueError as exc:
         fail(folder_name, str(exc))

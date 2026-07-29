@@ -1,0 +1,27 @@
+{
+  "record_format_version": 2,
+  "status": "RECORDED_PREDEPLOYMENT",
+  "release": "LaborCoin Revision 7.2",
+  "contract": "LaborCoinV4",
+  "version": "LABR V4.0.0",
+  "folder": "04-token",
+  "source_sha256": "53b02c262af296c13ce38629f4c3ede6775f2a7f1d8f00a2ad0452b4c1f4fb52",
+  "remix_source_sha256": "40a939523ae6a7ec67c0c82409e3762de7859f05f61e9faebf612b99d69adc2a",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "source_record_sha256": "b9d4288e70ab04f7ca2a6ee52886b386e227d29965e97802eb6e6720b5de71f1",
+  "artifact_sha256": "7915a44ac106df72a87f6fd9b1f1b1aa6d51f5231ad198cb9339f42cbab1db10",
+  "metadata_sha256": "34d0cdd8bdeb448f9eb6f44e406f60b1843678fb875e89f5eef2a2aece7dd7d2",
+  "build_info_sha256": "585e39ea6226248f36560645e0d9c1a09df5791f1932ad6206e2ff3b9af79577",
+  "creation_bytecode_bytes": 13799,
+  "runtime_template_bytes": 10033,
+  "creation_bytecode_keccak256": "0x8695b828d683e941743d14fa6fa66fd2cf5e8600f02b15ff24bd8532df455ae2",
+  "runtime_template_keccak256": "0x141d357a51ac2704823f644dc5fac00d45c75941534686f1992c61d5302a51f2",
+  "compiler_diagnostics": "WARNINGS_RECORDED:1",
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "type": "Warning",
+      "message": "Warning: Function state mutability can be restricted to view\n   --> contract/LaborCoinV4_Remix.sol:204:5:\n    |\n204 |     function renounceOwnership() external onlyLaunchOwner {\n    |     ^ (Relevant source part starts here and spans across multiple lines).\n\n"
+    }
+  ]
+}

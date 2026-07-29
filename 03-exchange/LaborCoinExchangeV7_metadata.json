@@ -1,0 +1,1482 @@
+{
+	"compiler": {
+		"version": "0.8.36+commit.8a079791"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "labr_",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "identityRegistry_",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "expectedIdentityRegistryRuntimeCodeHash_",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "AddressHasNoCode",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentTimestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "DeadlineExpired",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "DirectPOLDepositRejected",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "IdentityVerificationRequired",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "available",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "required",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientAllowance",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "available",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "required",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientInventory",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "payment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "required",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientPOLPayment",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "available",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "required",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientTokenBalance",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "actual",
+						"type": "bytes32"
+					}
+				],
+				"name": "InvalidIdentityCompatibility",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "actual",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "expected",
+						"type": "bytes32"
+					}
+				],
+				"name": "InvalidIdentityRuntimeCodeHash",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					}
+				],
+				"name": "InvalidIdentityThreshold",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "reportedCompatibility",
+						"type": "bytes32"
+					}
+				],
+				"name": "InvalidTokenCompatibility",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "reportedCooldown",
+						"type": "uint256"
+					}
+				],
+				"name": "InvalidTokenCooldown",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "actual",
+						"type": "address"
+					}
+				],
+				"name": "InvalidTokenIdentity",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "actual",
+						"type": "bytes32"
+					}
+				],
+				"name": "InvalidTokenIdentityCodeHash",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "reportedSupply",
+						"type": "uint256"
+					}
+				],
+				"name": "InvalidTokenSupply",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "buyTreasuryBps",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sellTreasuryBps",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sellDividendBps",
+						"type": "uint256"
+					}
+				],
+				"name": "InvalidTokenTaxConfiguration",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "reportedLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "InvalidTokenTransactionLimit",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "reportedTreasury",
+						"type": "address"
+					}
+				],
+				"name": "InvalidTokenTreasury",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "reportedLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "InvalidTokenWalletLimit",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expected",
+						"type": "uint256"
+					}
+				],
+				"name": "InventoryAccountingMismatch",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LaunchNotFinalized",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "required",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximum",
+						"type": "uint256"
+					}
+				],
+				"name": "MaximumPOLExceeded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minimum",
+						"type": "uint256"
+					}
+				],
+				"name": "MinimumPOLNotMet",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "NativeTransferFailed",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "caller",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "transactionOrigin",
+						"type": "address"
+					}
+				],
+				"name": "OnlyDirectWallet",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "payment",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximum",
+						"type": "uint256"
+					}
+				],
+				"name": "PaymentExceedsMaximum",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "requested",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalSold",
+						"type": "uint256"
+					}
+				],
+				"name": "RedemptionExceedsSoldSupply",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ReentrancyGuardReentrantCall",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "accounted",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expected",
+						"type": "uint256"
+					}
+				],
+				"name": "ReserveAccountingMismatch",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "required",
+						"type": "uint256"
+					}
+				],
+				"name": "ReserveUnderfunded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "resultingSold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximum",
+						"type": "uint256"
+					}
+				],
+				"name": "SupplyExceeded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "resultingSold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "unlocked",
+						"type": "uint256"
+					}
+				],
+				"name": "SupplyLocked",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TokenTransferFailed",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximum",
+						"type": "uint256"
+					}
+				],
+				"name": "TransactionLimitExceeded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "expected",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					}
+				],
+				"name": "UnexpectedTokenMovement",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"name": "WalletAboveLimit",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "resultingBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximum",
+						"type": "uint256"
+					}
+				],
+				"name": "WalletLimitExceeded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "actualChainId",
+						"type": "uint256"
+					}
+				],
+				"name": "WrongChain",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "reportedExchange",
+						"type": "address"
+					}
+				],
+				"name": "WrongOfficialExchange",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ZeroAddress",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ZeroCodeHash",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ZeroTokenAmount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tokensOut",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalPOLIn",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "reserveContribution",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "daoContribution",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "refund",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalSoldAfter",
+						"type": "uint256"
+					}
+				],
+				"name": "BuyExecuted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tokensIn",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "grossRedemption",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sellerPOL",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "daoContribution",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "dividendContribution",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalSoldAfter",
+						"type": "uint256"
+					}
+				],
+				"name": "SellExecuted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "previousUnlockedSupply",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newUnlockedSupply",
+						"type": "uint256"
+					}
+				],
+				"name": "TrancheUnlocked",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "BPS_DENOMINATOR",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "BUY_TREASURY_BPS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "COMPATIBILITY_ID",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "CONTRACT_VERSION",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "INITIAL_TRANCHE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "LABR",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_EXCHANGE_TRANSACTION",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_EXCHANGE_WALLET",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_PRICE_POL",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_SUPPLY",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_SUPPLY_TOKENS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MIN_PRICE_POL",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "POLYGON_MAINNET_CHAIN_ID",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PRICE_RANGE_POL",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "SELLER_BPS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "SELL_DIVIDEND_BPS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "SELL_TREASURY_BPS",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "TRADE_COOLDOWN",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "TRANCHE_SIZE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "WAD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "accountedReserve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxPOLIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "buyExactTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalPOLIn",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "canTrade",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentSpotPricePOL",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "sold",
+						"type": "uint256"
+					}
+				],
+				"name": "curveReserveAt",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "daoTreasury",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "excessPOL",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "expectedIdentityRegistryRuntimeCodeHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "identityRegistry",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "invariantsHold",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "launchReady",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					}
+				],
+				"name": "maxBuyableTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					}
+				],
+				"name": "maxSellableTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "nextTradeTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "quoteBuyExactTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "reserveContribution",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daoContribution",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalPOLIn",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "quoteSellExactTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "grossRedemption",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sellerPOL",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daoContribution",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dividendContribution",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minPOLOut",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "sellExactTokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "sellerPOL",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "sold",
+						"type": "uint256"
+					}
+				],
+				"name": "spotPricePOL",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unlockedSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "Core invariants: - LABR is the sole traded token. - The curve is denominated directly in native POL; no oracle is used. - Buys purchase an exact LABR amount using the integral of the curve. - The 10% buy treasury contribution is charged outside the curve reserve. - Sells redeem the exact inverse integral and split the gross redemption:   90% seller, 5% DAO treasury, and 5% LABR-holder POL dividends. - `accountedReserve` always equals `curveReserveAt(totalSold)`. - Exchange LABR inventory always equals `MAX_SUPPLY - totalSold`. - Identity Registry V1 independently verifies every official buyer and seller. - The LABR token independently enforces the 5,000 transaction limit,   10,000 wallet limit, protocol-only transfer policy, and 12-hour trade cooldown. - No owner, pause, upgrade, withdrawal, recovery, setter, or arbitrary call exists. Runtime-code-hash requirement: - `LABR` is deliberately stored in contract storage rather than declared   immutable. Constructor arguments therefore do not alter deployed runtime   bytecode, allowing LABR V4 to precommit to this contract's exact runtime   code hash before the Exchange address exists.",
+			"errors": {
+				"ReentrancyGuardReentrantCall()": [
+					{
+						"details": "Unauthorized reentrant call."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"buyExactTokens(uint256,uint256,uint256)": {
+					"params": {
+						"deadline": "Final timestamp at which the trade may execute.",
+						"maxPOLIn": "User's maximum acceptable total POL cost.",
+						"tokenAmount": "Exact LABR amount, including 18 decimals."
+					},
+					"returns": {
+						"totalPOLIn": "Exact total POL charged before refund."
+					}
+				},
+				"curveReserveAt(uint256)": {
+					"details": "Integral of: P(s) = MIN_PRICE_POL      + PRICE_RANGE_POL * (s / MAX_SUPPLY)^2 F(s) = MIN_PRICE_POL * s      + PRICE_RANGE_POL * MAX_TOKENS * x^3 / 3 where token-unit conversion and fixed-point scaling are applied below."
+				},
+				"excessPOL()": {
+					"details": "No recovery function exists. Forced POL remains permanently trapped."
+				},
+				"sellExactTokens(uint256,uint256,uint256)": {
+					"params": {
+						"deadline": "Final timestamp at which the trade may execute.",
+						"minPOLOut": "Minimum acceptable POL paid to the seller.",
+						"tokenAmount": "Exact LABR amount, including 18 decimals."
+					},
+					"returns": {
+						"sellerPOL": "Exact POL paid to the seller."
+					}
+				}
+			},
+			"title": "LaborCoin Exchange V7",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"LABR()": {
+					"notice": "Final LABR V4 address. Stored, not immutable, by design."
+				},
+				"MAX_PRICE_POL()": {
+					"notice": "Maximum curve price at full distribution: 210 POL per LABR."
+				},
+				"MIN_PRICE_POL()": {
+					"notice": "Starting curve price: 14 POL per LABR."
+				},
+				"accountedReserve()": {
+					"notice": "POL reserved exclusively for integral-curve redemptions."
+				},
+				"buyExactTokens(uint256,uint256,uint256)": {
+					"notice": "Purchases an exact amount of LABR."
+				},
+				"canTrade(address)": {
+					"notice": "Forwards LABR's authoritative cooldown eligibility."
+				},
+				"currentSpotPricePOL()": {
+					"notice": "Current marginal price in POL wei per whole LABR."
+				},
+				"curveReserveAt(uint256)": {
+					"notice": "Total POL curve liability at a supplied distribution point."
+				},
+				"excessPOL()": {
+					"notice": "Returns surplus POL that is not part of curve liabilities."
+				},
+				"invariantsHold()": {
+					"notice": "Returns whether all launch, inventory, and reserve invariants hold."
+				},
+				"launchReady()": {
+					"notice": "Returns whether LABR has atomically bound this exact Exchange."
+				},
+				"maxBuyableTokens(address)": {
+					"notice": "Maximum LABR this account can buy in one current transaction."
+				},
+				"maxSellableTokens(address)": {
+					"notice": "Maximum LABR this account can currently sell in one transaction."
+				},
+				"nextTradeTime(address)": {
+					"notice": "Forwards LABR's authoritative next trade timestamp."
+				},
+				"quoteBuyExactTokens(uint256)": {
+					"notice": "Quotes the exact POL requirements for an exact-token purchase."
+				},
+				"quoteSellExactTokens(uint256)": {
+					"notice": "Quotes the exact inverse-curve redemption and sell split."
+				},
+				"sellExactTokens(uint256,uint256,uint256)": {
+					"notice": "Sells an exact amount of LABR."
+				},
+				"spotPricePOL(uint256)": {
+					"notice": "Marginal price at a supplied distribution point."
+				},
+				"totalSold()": {
+					"notice": "LABR currently outside the Exchange inventory."
+				},
+				"unlockedSupply()": {
+					"notice": "Permanently unlocked distribution capacity."
+				}
+			},
+			"notice": "Immutable official LABR market using a POL-denominated integral curve.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/LaborCoinExchangeV7_Remix.sol": "LaborCoinExchangeV7"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/LaborCoinExchangeV7_Remix.sol": {
+			"keccak256": "0xecc9ccc62b53d477608eeb3cec6f601606e0577ce194b3afda59c13a9f9b0965",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1e65587addd2e030e51ad9b3218588b49bf1622d554630c9a6f77faa3f167bb5",
+				"dweb:/ipfs/QmPLeQGhLnyJBw9qpQ8CVG55ptwPzFuVrB9bVrcqdy1nWG"
+			]
+		},
+		"https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.6.1/contracts/utils/ReentrancyGuard.sol": {
+			"keccak256": "0xa516cbf1c7d15d3517c2d668601ce016c54395bf5171918a14e2686977465f53",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1e1d079e8edfb58efd23a311e315a4807b01b5d1cf153f8fa2d0608b9dec3e99",
+				"dweb:/ipfs/QmTBExeX2SDTkn5xbk5ssbYSx7VqRp9H4Ux1CY4uQM4b9N"
+			]
+		},
+		"https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v5.6.1/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b",
+				"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM"
+			]
+		}
+	},
+	"version": 1
+}

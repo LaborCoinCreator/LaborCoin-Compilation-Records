@@ -69,17 +69,93 @@ def compiler_diagnostics(build_info: dict[str, Any]) -> tuple[str, list[dict[str
 
 
 def validate_build_profile(build_info: dict[str, Any]) -> None:
-    blob = json.dumps(build_info, separators=(",", ":"), sort_keys=True).lower()
-    markers = [
-        "0.8.36",
-        '"optimizer":{"enabled":true,"runs":200',
-        '"evmversion":"prague"',
-        '"viair":false',
-        '"bytecodehash":"ipfs"',
-    ]
-    missing = [marker for marker in markers if marker not in blob]
-    if missing:
-        raise ValueError("build-info is missing required compiler marker(s): " + ", ".join(missing))
+    if not isinstance(build_info, dict):
+        raise ValueError("build-info must be a JSON object")
+
+    problems: list[str] = []
+
+    if build_info.get("solcLongVersion") != "0.8.36+commit.8a079791":
+        problems.append("compiler must be 0.8.36+commit.8a079791")
+
+    compiler_input = build_info.get("input")
+    settings = compiler_input.get("settings") if isinstance(compiler_input, dict) else None
+
+    if not isinstance(settings, dict):
+        raise ValueError("build-info input.settings must be a JSON object")
+
+    optimizer = settings.get("optimizer")
+
+    if not isinstance(optimizer, dict) or optimizer.get("enabled") is not True:
+        problems.append("optimizer.enabled must be true")
+
+    if not isinstance(optimizer, dict) or optimizer.get("runs") != 200:
+        problems.append("optimizer.runs must be 200")
+
+    if settings.get("evmVersion") != "prague":
+        problems.append('evmVersion must be "prague"')
+
+    # Solidity defaults viaIR to false when the field is omitted.
+    if settings.get("viaIR", False) is not False:
+        problems.append("viaIR must be false")
+
+    metadata_settings = settings.get("metadata", {})
+
+    if not isinstance(metadata_settings, dict):
+        problems.append("metadata settings must be a JSON object")
+    elif metadata_settings.get("bytecodeHash", "ipfs") != "ipfs":
+        # Solidity defaults metadata.bytecodeHash to "ipfs" when omitted.
+        problems.append('metadata.bytecodeHash must be "ipfs"')
+
+    if problems:
+        raise ValueError(
+            "build-info compiler profile mismatch: " + "; ".join(problems)
+        )
+
+
+def normalize_source_text(value: str) -> str:
+    if not isinstance(value, str):
+        raise ValueError("compiler input source content is not a string")
+    return value.replace("\r\n", "\n").replace("\r", "\n")
+
+
+def validate_compiler_input_source(
+    build_info: dict[str, Any],
+    metadata: dict[str, Any],
+    remix_source: Path,
+    contract: str,
+) -> None:
+    metadata_settings = metadata.get("settings")
+    if not isinstance(metadata_settings, dict):
+        raise ValueError("Metadata settings must be a JSON object")
+
+    compilation_target = metadata_settings.get("compilationTarget")
+    if not isinstance(compilation_target, dict) or len(compilation_target) != 1:
+        raise ValueError("Metadata must identify exactly one compilation target")
+
+    target_source, target_contract = next(iter(compilation_target.items()))
+    if target_contract != contract:
+        raise ValueError(f"Metadata identifies {target_contract}, expected {contract}")
+    if Path(target_source).name != remix_source.name:
+        raise ValueError(
+            f"Metadata source is {target_source}, expected a source named {remix_source.name}"
+        )
+
+    compiler_input = build_info.get("input")
+    compiler_sources = compiler_input.get("sources") if isinstance(compiler_input, dict) else None
+    if not isinstance(compiler_sources, dict):
+        raise ValueError("Build-info input.sources must be a JSON object")
+
+    target_input = compiler_sources.get(target_source)
+    if not isinstance(target_input, dict):
+        raise ValueError(f"Build-info input does not contain compilation source {target_source}")
+
+    compiled_content = target_input.get("content")
+    frozen_content = remix_source.read_text(encoding="utf-8")
+    if normalize_source_text(compiled_content) != normalize_source_text(frozen_content):
+        raise ValueError(
+            "Build-info compiler input source does not match the frozen Remix source "
+            "after line-ending normalization"
+        )
 
 
 def render_manifest_markdown(manifest: dict[str, Any]) -> str:

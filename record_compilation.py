@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import json
 import zipfile
 from pathlib import Path
 
@@ -17,6 +16,7 @@ from manifest_tools import (
     required_zip_members,
     sha256_file,
     validate_build_profile,
+    validate_compiler_input_source,
 )
 
 ROOT = Path(__file__).resolve().parent
@@ -93,16 +93,107 @@ build_info = load_json(artifact_paths["build_info"])
 validate_build_profile(build_info)
 diagnostic_status, diagnostics = compiler_diagnostics(build_info)
 
-artifact_blob = json.dumps(artifact, separators=(",", ":"))
-if contract not in artifact_blob:
-    raise SystemExit(f"Artifact does not identify {contract}")
+if not isinstance(artifact, dict):
+    raise SystemExit("Artifact export must be a JSON object")
 if not isinstance(metadata, dict):
     raise SystemExit("Metadata export must be a JSON object")
+
+metadata_settings = metadata.get("settings")
+if not isinstance(metadata_settings, dict):
+    raise SystemExit("Metadata settings must be a JSON object")
+
+compilation_target = metadata_settings.get("compilationTarget")
+if not isinstance(compilation_target, dict) or len(compilation_target) != 1:
+    raise SystemExit("Metadata must identify exactly one compilation target")
+
+target_source, target_contract = next(iter(compilation_target.items()))
+if target_contract != contract:
+    raise SystemExit(
+        f"Metadata identifies {target_contract}, expected {contract}"
+    )
+
+try:
+    validate_compiler_input_source(
+        build_info, metadata, remix_source, contract
+    )
+except ValueError as exc:
+    raise SystemExit(str(exc)) from exc
+
+build_output = build_info.get("output")
+if not isinstance(build_output, dict):
+    raise SystemExit("Build-info output must be a JSON object")
+
+build_contracts = build_output.get("contracts")
+if not isinstance(build_contracts, dict):
+    raise SystemExit("Build-info output.contracts must be a JSON object")
+
+target_source_output = build_contracts.get(target_source)
+if not isinstance(target_source_output, dict):
+    raise SystemExit(
+        f"Build-info does not contain compilation source {target_source}"
+    )
+
+target_output = target_source_output.get(target_contract)
+if not isinstance(target_output, dict):
+    raise SystemExit(
+        f"Build-info does not contain {target_contract} at {target_source}"
+    )
+
+metadata_output = metadata.get("output")
+if not isinstance(metadata_output, dict):
+    raise SystemExit("Metadata output must be a JSON object")
+
+artifact_abi = artifact.get("abi")
+metadata_abi = metadata_output.get("abi")
+build_info_abi = target_output.get("abi")
+
+if artifact_abi != metadata_abi or artifact_abi != build_info_abi:
+    raise SystemExit(
+        "Artifact ABI does not match metadata and build-info target"
+    )
 
 creation = find_hex(artifact, {"bytecode"})
 runtime = find_hex(artifact, {"deployedBytecode", "runtimeBytecode"})
 if not creation or not runtime:
-    raise SystemExit("Could not locate complete creation and deployed runtime bytecode in artifact")
+    raise SystemExit(
+        "Could not locate complete creation and deployed runtime bytecode in artifact"
+    )
+
+target_evm = target_output.get("evm")
+if not isinstance(target_evm, dict):
+    raise SystemExit("Build-info target is missing EVM output")
+
+expected_creation = (
+    target_evm.get("bytecode", {}).get("object")
+    if isinstance(target_evm.get("bytecode"), dict)
+    else None
+)
+expected_runtime = (
+    target_evm.get("deployedBytecode", {}).get("object")
+    if isinstance(target_evm.get("deployedBytecode"), dict)
+    else None
+)
+
+if not isinstance(expected_creation, str) or not isinstance(expected_runtime, str):
+    raise SystemExit(
+        "Build-info target is missing creation or deployed runtime bytecode"
+    )
+
+if (
+    creation.removeprefix("0x").lower()
+    != expected_creation.removeprefix("0x").lower()
+):
+    raise SystemExit(
+        "Artifact creation bytecode does not match build-info target"
+    )
+
+if (
+    runtime.removeprefix("0x").lower()
+    != expected_runtime.removeprefix("0x").lower()
+):
+    raise SystemExit(
+        "Artifact deployed runtime bytecode does not match build-info target"
+    )
 
 record = {
     "record_format_version": 2,

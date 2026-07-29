@@ -48,7 +48,7 @@ class MasterManifestTests(unittest.TestCase):
         actual = (ROOT / "MASTER_COMPILATION_MANIFEST.md").read_text(encoding="utf-8")
         self.assertEqual(actual, render_manifest_markdown(self.manifest))
 
-    def test_precompilation_verifier_exit_is_expected(self):
+    def test_master_verifier_exit_matches_manifest_state(self):
         result = subprocess.run(
             [sys.executable, str(ROOT / "verify_master_compilation.py")],
             cwd=ROOT,
@@ -56,8 +56,20 @@ class MasterManifestTests(unittest.TestCase):
             text=True,
             check=False,
         )
-        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
-        self.assertIn("PRECOMPILATION PENDING", result.stdout)
+        all_recorded = all(
+            entry.get("status") == "RECORDED_PREDEPLOYMENT"
+            for entry in self.manifest["contracts"]
+        )
+        expected_returncode = 0 if all_recorded else 2
+        expected_text = (
+            "MASTER COMPILATION VERIFICATION: PASS"
+            if all_recorded
+            else "MASTER COMPILATION VERIFICATION: PRECOMPILATION PENDING"
+        )
+        self.assertEqual(
+            result.returncode, expected_returncode, result.stdout + result.stderr
+        )
+        self.assertIn(expected_text, result.stdout)
 
 
 if __name__ == "__main__":
