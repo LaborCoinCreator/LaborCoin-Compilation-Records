@@ -2,7 +2,7 @@
 
 This repository is the authoritative compilation-provenance record for the seven LaborCoin Revision 7.2 contracts.
 
-**Current status: precompilation source freeze. No contract is represented as compiled or deployment-ready.**
+**Current status: recorded predeployment compilation. All seven contract artifact sets and deterministic sealed records passed structural and cryptographic verification. Deployment testing and on-chain runtime verification remain separate gates.**
 
 ## Repository rule
 
@@ -46,7 +46,7 @@ python .\VERIFY_RELEASE.py
 python .\verify_master_compilation.py
 ```
 
-Before artifacts exist, the master verifier must return `PRECOMPILATION PENDING` with exit code 2. After all seven records are complete, it must return `PASS` with exit code 0.
+The completed Revision 7.2 record requires the master verifier to return `PASS` with exit code 0. The release verification suite must also pass all assurance tests and confirm all seven compilation records.
 
 ## Authority hierarchy
 
