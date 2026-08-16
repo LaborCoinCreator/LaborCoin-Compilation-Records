@@ -56,13 +56,13 @@ class SourceGuards(unittest.TestCase):
 
     def test_versions(self):
         expected = {
-            "01-policy": "V1.0.1",
+            "01-policy": "V1.1.1",
             "02-identity-registry": "V1.0.1",
             "03-exchange": "V7.0.0",
             "04-token": "V4.0.0",
             "05-labrv": "V9.1.1",
             "06-registration": "V6.1.1",
-            "07-governance": "V15.1.1",
+            "07-governance": "V15.2.0",
         }
         manifest = json.loads((ROOT / "MASTER_COMPILATION_MANIFEST.json").read_text())
         for entry in manifest["contracts"]:

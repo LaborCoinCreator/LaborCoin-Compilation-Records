@@ -4,9 +4,9 @@
   "order": 7,
   "folder": "07-governance",
   "contract": "LaborCoinGovernanceV15",
-  "version": "Governance V15.1.1",
-  "source_sha256": "b0d8c8e914002bb741a6f7837a01dec521be9b7e66ca70bebc6caa99884f1e6d",
-  "remix_source_sha256": "f13396b14dd0e8eafaaee57bfdb1aab02667fb0de1e5205984283cc1204dfc00",
+  "version": "Governance V15.2.0",
+  "source_sha256": "306b138d6df3b8368f42185ad3bd50cd3912182c478e34e549ef688779364c9e",
+  "remix_source_sha256": "aa336e9c98642f1a5da46403370bc6bfe310e426fd1ba311946616ddfa99dd8b",
   "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
   "expected_artifacts": {
     "artifact": "LaborCoinGovernanceV15.json",

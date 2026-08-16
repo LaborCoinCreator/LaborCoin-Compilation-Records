@@ -4,9 +4,9 @@
   "order": 1,
   "folder": "01-policy",
   "contract": "LaborCoinProposalTextPolicyV1",
-  "version": "Policy V1.0.1",
-  "source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
-  "remix_source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
+  "version": "Policy V1.1.1",
+  "source_sha256": "df41a0e0f6a74510f055d1118c18746c4d731df5265ca39731adc945ee4defad",
+  "remix_source_sha256": "df41a0e0f6a74510f055d1118c18746c4d731df5265ca39731adc945ee4defad",
   "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
   "expected_artifacts": {
     "artifact": "LaborCoinProposalTextPolicyV1.json",

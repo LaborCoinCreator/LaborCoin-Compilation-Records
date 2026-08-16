@@ -14,6 +14,6 @@ verification = subprocess.run([sys.executable, str(ROOT / "verify_master_compila
 if verification.returncode not in (0, 2):
     raise SystemExit(verification.returncode)
 if verification.returncode == 2:
-    print("Precompilation pending is expected until all seven real artifact sets are recorded.")
+    print("Precompilation pending is expected while replacement compilation records remain outstanding.")
 else:
     print("All seven compilation records passed structural and cryptographic verification.")

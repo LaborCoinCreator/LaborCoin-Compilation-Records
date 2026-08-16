@@ -2,7 +2,7 @@
 
 This repository is the authoritative compilation-provenance record for the seven LaborCoin Revision 7.2 contracts.
 
-**Current status: recorded predeployment compilation. All seven contract artifact sets and deterministic sealed records passed structural and cryptographic verification. Deployment testing and on-chain runtime verification remain separate gates.**
+**Current status: partial replacement compilation pending. Five unchanged Revision 7.2 contract records remain valid and recorded predeployment. Proposal Text Policy V1.1.1 and Governance V15.2.0 are source-frozen and pending replacement compilation. Deployment testing and on-chain runtime verification remain separate gates.**
 
 ## Repository rule
 
@@ -10,13 +10,13 @@ Each numbered folder is the only approved destination for that contract's compil
 
 | Order | Folder | Contract | Version |
 |---:|---|---|---|
-| 1 | `01-policy` | `LaborCoinProposalTextPolicyV1` | V1.0.1 |
+| 1 | `01-policy` | `LaborCoinProposalTextPolicyV1` | V1.1.1 |
 | 2 | `02-identity-registry` | `LaborCoinIdentityRegistryV1` | V1.0.1 |
 | 3 | `03-exchange` | `LaborCoinExchangeV7` | V7.0.0 |
 | 4 | `04-token` | `LaborCoinV4` | V4.0.0 |
 | 5 | `05-labrv` | `LaborVoteV9` | V9.1.1 |
 | 6 | `06-registration` | `LaborCoinRegistrationV6` | V6.1.1 |
-| 7 | `07-governance` | `LaborCoinGovernanceV15` | V15.1.1 |
+| 7 | `07-governance` | `LaborCoinGovernanceV15` | V15.2.0 |
 
 This public repository intentionally excludes superseded prelaunch compiler records and incomplete revision history. Those records are not authoritative for Revision 7.2.
 

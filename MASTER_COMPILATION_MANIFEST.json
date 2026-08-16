@@ -5,8 +5,8 @@
   "source_repository": {
     "url": "https://github.com/LaborCoinCreator/LaborCoin",
     "release_path": "release/revision-7.2-source-freeze",
-    "source_manifest_sha256": "91de23c6d58d5531abe03aec756887d12715de9f4eee7413decfb81d589799bc",
-    "source_freeze_commit": "1eef2b39759ce95450749ea4254e50ae6c09eb56"
+    "source_manifest_sha256": "73a0308daa6cc2178d81e588c5fdad8bcb0a17043c68cec1d1dd97b5ed2b5a64",
+    "source_freeze_commit": "f17377186317df6d5695cdae81b2d3e34f9491f7"
   },
   "compiler": {
     "language": "Solidity",
@@ -27,34 +27,24 @@
     }
   },
   "source_root": "active numbered component folders",
-  "artifact_status": "RECORDED_PREDEPLOYMENT",
+  "artifact_status": "PARTIAL",
   "contracts": [
     {
       "order": 1,
       "folder": "01-policy",
       "contract": "LaborCoinProposalTextPolicyV1",
-      "version": "Policy V1.0.1",
-      "source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
-      "remix_source_sha256": "64f268ea1e09fb33724210e3d0f195d02997e15fcb8e30e9eea8363fa5931aeb",
+      "version": "Policy V1.1.1",
+      "source_sha256": "df41a0e0f6a74510f055d1118c18746c4d731df5265ca39731adc945ee4defad",
+      "remix_source_sha256": "df41a0e0f6a74510f055d1118c18746c4d731df5265ca39731adc945ee4defad",
       "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
-      "source_record_sha256": "d3dc2fab470c6b2273def14d5b61876573f224f72e147fbda771a7c3fd0a0c72",
+      "source_record_sha256": "0180570d2ab5bf7a5d7e3b31ea78a6bca944fb6614d69e5cb7906f6097bb8fd4",
       "artifacts": {
         "artifact": "LaborCoinProposalTextPolicyV1.json",
         "metadata": "LaborCoinProposalTextPolicyV1_metadata.json",
         "build_info": "LaborCoinProposalTextPolicyV1.build-info.json",
         "sealed_record": "LaborCoinProposalTextPolicyV1-Compilation-Record.zip"
       },
-      "status": "RECORDED_PREDEPLOYMENT",
-      "artifact_sha256": "41e5ad3089668012c623a1149721be9bd53fd68bc8dc6592b6ecb75f4dccb113",
-      "metadata_sha256": "69ad9098e4a26a1c239340bead81f78fcfc04fe855ea3860f5b342246210b580",
-      "build_info_sha256": "8edff9ed776c0389ccd2cb55eace31165f65eaa7d2164256818c4c4d2b46cd57",
-      "compilation_record_sha256": "faf8697eb128e0e4adc47173c908b65f324c632542c57eb1a513af4341d77a1c",
-      "sealed_record_sha256": "3069a3ed347bd5dbdb0a7f78441d47b4748636e16a779b6b71bd82836b2c418e",
-      "creation_bytecode_bytes": 9991,
-      "runtime_template_bytes": 9963,
-      "creation_bytecode_keccak256": "0x9e1f7d64a25aafa80851ddbc2524e47cfc98873a3dea6ee557fc16a5416fcebf",
-      "runtime_template_keccak256": "0x8044a1ffe397bea64f942b17dd1d5d98033f549a326cf3670e79bd3d663de006",
-      "compiler_diagnostics": "ZERO_DIAGNOSTICS"
+      "status": "PENDING_COMPILATION"
     },
     {
       "order": 2,
@@ -195,28 +185,18 @@
       "order": 7,
       "folder": "07-governance",
       "contract": "LaborCoinGovernanceV15",
-      "version": "Governance V15.1.1",
-      "source_sha256": "b0d8c8e914002bb741a6f7837a01dec521be9b7e66ca70bebc6caa99884f1e6d",
-      "remix_source_sha256": "f13396b14dd0e8eafaaee57bfdb1aab02667fb0de1e5205984283cc1204dfc00",
+      "version": "Governance V15.2.0",
+      "source_sha256": "306b138d6df3b8368f42185ad3bd50cd3912182c478e34e549ef688779364c9e",
+      "remix_source_sha256": "aa336e9c98642f1a5da46403370bc6bfe310e426fd1ba311946616ddfa99dd8b",
       "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
-      "source_record_sha256": "15bbf2f8ba78ed5d77bec93a444d633fa68ef4fb32bff72278c8e98df7da8099",
+      "source_record_sha256": "8d9195a97de8ccb4fbbaa11573b2a18b000b317bc9c20477f48f5825e182f25d",
       "artifacts": {
         "artifact": "LaborCoinGovernanceV15.json",
         "metadata": "LaborCoinGovernanceV15_metadata.json",
         "build_info": "LaborCoinGovernanceV15.build-info.json",
         "sealed_record": "LaborCoinGovernanceV15-Compilation-Record.zip"
       },
-      "status": "RECORDED_PREDEPLOYMENT",
-      "artifact_sha256": "e2427ef07bab979a29f2de8e7e47d433f3c2cce57864896fddbe6f05792022ec",
-      "metadata_sha256": "cdeabc1a43072ccbe276d6d43e5ae1a52be65e38ab438f7f08987084f5d340b9",
-      "build_info_sha256": "be6206f7f17bd40da0a1c065e9cde17a5a70830e3d541394bc29a241e11a6f23",
-      "compilation_record_sha256": "38999a1f17cadc6af4ae433e4181caf3f9d8a259e5e4c3e909259540fbb3aaac",
-      "sealed_record_sha256": "c26fa7569dcac3e2ae288f63a471e2d572a8497d4a7d0d7a315b6a1b910d89fd",
-      "creation_bytecode_bytes": 21310,
-      "runtime_template_bytes": 15513,
-      "creation_bytecode_keccak256": "0xf11030e5fd5943e572e5e14f3cadee88b593a0a2b8e90e074849db919012f921",
-      "runtime_template_keccak256": "0xc1c3cc475cf3e7fcf8e9b224295096d312b177d81e91edd2601c5badc13a76f2",
-      "compiler_diagnostics": "ZERO_DIAGNOSTICS"
+      "status": "PENDING_COMPILATION"
     }
   ]
 }
