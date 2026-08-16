@@ -2,7 +2,7 @@
 
 This repository is the authoritative compilation-provenance record for the seven LaborCoin Revision 7.2 contracts.
 
-**Current status: partial replacement compilation pending. Five unchanged Revision 7.2 contract records remain valid and recorded predeployment. Proposal Text Policy V1.1.1 and Governance V15.2.0 are source-frozen and pending replacement compilation. Deployment testing and on-chain runtime verification remain separate gates.**
+**Current status: recorded predeployment compilation. All seven Revision 7.2 contract artifact sets and deterministic sealed records passed structural and cryptographic verification. Deployment testing and on-chain runtime verification remain separate gates.**
 
 ## Repository rule
 

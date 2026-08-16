@@ -27,7 +27,7 @@
     }
   },
   "source_root": "active numbered component folders",
-  "artifact_status": "PARTIAL",
+  "artifact_status": "RECORDED_PREDEPLOYMENT",
   "contracts": [
     {
       "order": 1,
@@ -44,7 +44,17 @@
         "build_info": "LaborCoinProposalTextPolicyV1.build-info.json",
         "sealed_record": "LaborCoinProposalTextPolicyV1-Compilation-Record.zip"
       },
-      "status": "PENDING_COMPILATION"
+      "status": "RECORDED_PREDEPLOYMENT",
+      "artifact_sha256": "e1782129a8f011f8e909b418b3bdc088149495e70095d2e51670c56df3292fdc",
+      "metadata_sha256": "5f37bf0fb78303afa28c8dc7cc2b58e3cd7b586cb1512f29708e1e9ccb4a4e25",
+      "build_info_sha256": "13a66e27699d2e520c81d2ab6d7498f30f529a3ea154087321e04e1573e12db4",
+      "compilation_record_sha256": "1e7b47600fd4ee79deac8842d417212df8b1c2c705a275746543eea16aed59b5",
+      "sealed_record_sha256": "1f9c15e233c75e5d2d00f42517fb92411d5ac6e588c64d55e0cab3cadca993c2",
+      "creation_bytecode_bytes": 13259,
+      "runtime_template_bytes": 13231,
+      "creation_bytecode_keccak256": "0xe94938481e292a4be85d223f4dc870a39c287ba5fc719938b6f0885d2b4002af",
+      "runtime_template_keccak256": "0x036b6344d7ce328f805a8113ae4c7b2d74a0b12751d543cfe0b642999ff18303",
+      "compiler_diagnostics": "ZERO_DIAGNOSTICS"
     },
     {
       "order": 2,
@@ -196,7 +206,17 @@
         "build_info": "LaborCoinGovernanceV15.build-info.json",
         "sealed_record": "LaborCoinGovernanceV15-Compilation-Record.zip"
       },
-      "status": "PENDING_COMPILATION"
+      "status": "RECORDED_PREDEPLOYMENT",
+      "artifact_sha256": "3a30f2c7bbbb3dcbac69ac2666fbf93aa58a8f2de9ca7ae8a0032ec7bf118c06",
+      "metadata_sha256": "b98d14cfb3cbdd09e339331e2c282fdbeb909c54755ecbb660a9bdeb6f5fd2eb",
+      "build_info_sha256": "82c76b0a109c09a60d8980439fd0636fd63c5e11f7402f2f0bb62427ddb69c7b",
+      "compilation_record_sha256": "059a447c596c68129830cde2f6ff61db2c9356ccfbdae94368260c23cc5b820e",
+      "sealed_record_sha256": "ad877798bb3ad6d9bb87f8be60ccde71768c0762fe9d0f861c802b54bc543861",
+      "creation_bytecode_bytes": 24295,
+      "runtime_template_bytes": 18177,
+      "creation_bytecode_keccak256": "0x9a8c454df9856b970b82f0ef7c88366c2c9d431c87bf61c9f7878cef6f8b8690",
+      "runtime_template_keccak256": "0xf4155d243c1482ef082baaf1719bed78e1744ea5282f9e0808bc22740eac2aca",
+      "compiler_diagnostics": "ZERO_DIAGNOSTICS"
     }
   ]
 }

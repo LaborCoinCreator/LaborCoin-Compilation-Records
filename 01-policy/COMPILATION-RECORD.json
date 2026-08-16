@@ -1,0 +1,21 @@
+{
+  "record_format_version": 2,
+  "status": "RECORDED_PREDEPLOYMENT",
+  "release": "LaborCoin Revision 7.2",
+  "contract": "LaborCoinProposalTextPolicyV1",
+  "version": "Policy V1.1.1",
+  "folder": "01-policy",
+  "source_sha256": "df41a0e0f6a74510f055d1118c18746c4d731df5265ca39731adc945ee4defad",
+  "remix_source_sha256": "df41a0e0f6a74510f055d1118c18746c4d731df5265ca39731adc945ee4defad",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "source_record_sha256": "0180570d2ab5bf7a5d7e3b31ea78a6bca944fb6614d69e5cb7906f6097bb8fd4",
+  "artifact_sha256": "e1782129a8f011f8e909b418b3bdc088149495e70095d2e51670c56df3292fdc",
+  "metadata_sha256": "5f37bf0fb78303afa28c8dc7cc2b58e3cd7b586cb1512f29708e1e9ccb4a4e25",
+  "build_info_sha256": "13a66e27699d2e520c81d2ab6d7498f30f529a3ea154087321e04e1573e12db4",
+  "creation_bytecode_bytes": 13259,
+  "runtime_template_bytes": 13231,
+  "creation_bytecode_keccak256": "0xe94938481e292a4be85d223f4dc870a39c287ba5fc719938b6f0885d2b4002af",
+  "runtime_template_keccak256": "0x036b6344d7ce328f805a8113ae4c7b2d74a0b12751d543cfe0b642999ff18303",
+  "compiler_diagnostics": "ZERO_DIAGNOSTICS",
+  "diagnostics": []
+}

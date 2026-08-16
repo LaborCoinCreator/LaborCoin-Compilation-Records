@@ -1,0 +1,501 @@
+{
+	"compiler": {
+		"version": "0.8.36+commit.8a079791"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					}
+				],
+				"name": "EmptyTextField",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "EmptyVerificationURI",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "character",
+						"type": "uint8"
+					}
+				],
+				"name": "InvalidTextCharacter",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidVerificationURI",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "character",
+						"type": "uint8"
+					}
+				],
+				"name": "InvalidVerificationURICharacter",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					}
+				],
+				"name": "NonCanonicalTextSpacing",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					}
+				],
+				"name": "ProhibitedLanguage",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "ProhibitedMarkup",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					}
+				],
+				"name": "ProhibitedURL",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					}
+				],
+				"name": "TextFieldHasNoWords",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum LaborCoinProposalTextPolicyV1.TextField",
+						"name": "field",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximum",
+						"type": "uint256"
+					}
+				],
+				"name": "TextFieldTooLong",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "UnsupportedVerificationURIScheme",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximum",
+						"type": "uint256"
+					}
+				],
+				"name": "VerificationURITooLong",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "COMPATIBILITY_ID",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "LEXICON_COMMITMENT",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_ORGANIZATION_NAME_BYTES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_VERIFICATION_URI_BYTES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_WORKER_GROUP_OR_CAMPAIGN_BYTES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MIN_ORGANIZATION_NAME_BYTES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MIN_VERIFICATION_URI_BYTES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MIN_WORKER_GROUP_OR_CAMPAIGN_BYTES",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PHRASE_HASH_COUNT",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "POLICY_VERSION",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "TOKEN_HASH_COUNT",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "organizationName",
+						"type": "string"
+					}
+				],
+				"name": "isOrganizationNameAllowed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "verificationURI",
+						"type": "string"
+					}
+				],
+				"name": "isVerificationURIAllowed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "workerGroupOrCampaign",
+						"type": "string"
+					}
+				],
+				"name": "isWorkerGroupOrCampaignAllowed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "organizationName",
+						"type": "string"
+					}
+				],
+				"name": "validateOrganizationName",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "contentHash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "verificationURI",
+						"type": "string"
+					}
+				],
+				"name": "validateVerificationURI",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "contentHash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "workerGroupOrCampaign",
+						"type": "string"
+					}
+				],
+				"name": "validateWorkerGroupOrCampaign",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "contentHash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This contract is deliberately deterministic and administrator-free. Short proposal labels are limited to single-line printable ASCII, reject markup and URL markers, and are screened against the committed hashed lexical denylist using the same normalization and obfuscation defenses as the original policy candidate. Verification references are validated separately and may use only the exact `https://` or `ipfs://` schemes. IPFS references are restricted to a canonical CID root: CIDv0 base58btc (`Qm...`) or CIDv1 base32/base36 (`b...` / `k...`) before any path, query, or fragment. It is a lexical and structural safeguard, not a semantic language model. No finite immutable denylist can recognize every hateful implication or every novel obfuscation. External verification content is not and cannot be authenticated or moderated by this contract.",
+			"kind": "dev",
+			"methods": {
+				"validateOrganizationName(string)": {
+					"returns": {
+						"contentHash": "Keccak-256 of the exact accepted field bytes."
+					}
+				},
+				"validateVerificationURI(string)": {
+					"returns": {
+						"contentHash": "Keccak-256 of the exact accepted URI bytes."
+					}
+				},
+				"validateWorkerGroupOrCampaign(string)": {
+					"returns": {
+						"contentHash": "Keccak-256 of the exact accepted field bytes."
+					}
+				}
+			},
+			"title": "LaborCoin Proposal Text Policy V1",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"isOrganizationNameAllowed(string)": {
+					"notice": "Non-reverting organization-name preview for wallets and frontends."
+				},
+				"isVerificationURIAllowed(string)": {
+					"notice": "Non-reverting verification-URI preview for wallets and frontends."
+				},
+				"isWorkerGroupOrCampaignAllowed(string)": {
+					"notice": "Non-reverting worker-group/campaign preview for wallets and frontends."
+				},
+				"validateOrganizationName(string)": {
+					"notice": "Reverts unless `organizationName` satisfies the permanent short-text policy."
+				},
+				"validateVerificationURI(string)": {
+					"notice": "Reverts unless `verificationURI` satisfies the permanent URI policy."
+				},
+				"validateWorkerGroupOrCampaign(string)": {
+					"notice": "Reverts unless `workerGroupOrCampaign` satisfies the permanent short-text policy."
+				}
+			},
+			"notice": "Immutable validation policy for human-authored fields in structured LaborCoin treasury proposals.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/LaborCoinProposalTextPolicyV1_Remix.sol": "LaborCoinProposalTextPolicyV1"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/LaborCoinProposalTextPolicyV1_Remix.sol": {
+			"keccak256": "0xc13d0ad83a237fdb752436f41bf91917e516466389c9b546232e56c1c9df09af",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e78bfafa3eee6be2aeade41580eea78c86a4ffe440335824b6cb76901d781f4",
+				"dweb:/ipfs/QmY9da6won7r7Cer4oEfkNe47rXGrNMgT8Q7P5xaWTzdPF"
+			]
+		}
+	},
+	"version": 1
+}
