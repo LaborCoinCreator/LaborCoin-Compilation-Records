@@ -1,17 +1,17 @@
 {
   "record_type": "SOURCE_FREEZE",
-  "release": "LaborCoin Revision 7.2",
+  "release": "LaborCoin Revision 7.3",
   "order": 7,
   "folder": "07-governance",
-  "contract": "LaborCoinGovernanceV15",
-  "version": "Governance V15.2.0",
-  "source_sha256": "306b138d6df3b8368f42185ad3bd50cd3912182c478e34e549ef688779364c9e",
-  "remix_source_sha256": "aa336e9c98642f1a5da46403370bc6bfe310e426fd1ba311946616ddfa99dd8b",
+  "contract": "LaborCoinGovernanceV16",
+  "version": "Governance V16.0.0",
+  "source_sha256": "7214ad9ead43a000c18fb78ac13e8d427b83bdee705407cef3483238a7bcb9ab",
+  "remix_source_sha256": "aa70ef14b8a89385da56e9a91db3cb93e5b87388c3e339b946614575c21a1111",
   "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
   "expected_artifacts": {
-    "artifact": "LaborCoinGovernanceV15.json",
-    "metadata": "LaborCoinGovernanceV15_metadata.json",
-    "build_info": "LaborCoinGovernanceV15.build-info.json",
-    "sealed_record": "LaborCoinGovernanceV15-Compilation-Record.zip"
+    "artifact": "LaborCoinGovernanceV16.json",
+    "metadata": "LaborCoinGovernanceV16_metadata.json",
+    "build_info": "LaborCoinGovernanceV16.build-info.json",
+    "sealed_record": "LaborCoinGovernanceV16-Compilation-Record.zip"
   }
 }

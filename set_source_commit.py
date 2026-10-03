@@ -1,55 +1,38 @@
 from __future__ import annotations
 
 import argparse
-import re
 from pathlib import Path
 
-from manifest_tools import (
-    atomic_write_json,
-    atomic_write_text,
-    load_json,
-    render_manifest_markdown,
-)
+from manifest_tools import atomic_write_json, atomic_write_text, load_json, render_manifest_markdown
 
 ROOT = Path(__file__).resolve().parent
+EXPECTED_COMMIT = "f5a1b200a6f703538b88319d5135b20f36dbae1c"
+EXPECTED_RECORD_COMMIT = "660931b0272c30705274b71ea36d6f6b74a4a430"
+EXPECTED_MANIFEST_SHA256 = "6afdeb3a44b227dcbe751a683fc6eb4b1e9190352e6e87a26717245ec8b3a05d"
 
 parser = argparse.ArgumentParser(
-    description="Bind the compilation record to the committed LaborCoin source freeze."
+    description="Verify/reassert the fixed LaborCoin Revision 7.3 source-freeze binding."
 )
-parser.add_argument(
-    "commit",
-    help="Full 40-character Git commit hash from the LaborCoin source repository",
-)
+parser.add_argument("commit", help="Exact Revision 7.3 source-freeze commit")
 args = parser.parse_args()
-
 commit = args.commit.lower()
 
-if not re.fullmatch(r"[0-9a-f]{40}", commit):
+if commit != EXPECTED_COMMIT:
     raise SystemExit(
-        "Commit must be the full 40-character hexadecimal Git commit hash."
+        "Revision 7.3 is permanently bound to source commit " + EXPECTED_COMMIT
     )
 
 manifest_path = ROOT / "MASTER_COMPILATION_MANIFEST.json"
 manifest = load_json(manifest_path)
+if manifest.get("release") != "LaborCoin Revision 7.3":
+    raise SystemExit("Master manifest is not Revision 7.3")
 
-statuses = [entry.get("status") for entry in manifest["contracts"]]
-allowed = {"PENDING_COMPILATION", "RECORDED_PREDEPLOYMENT"}
-
-if any(status not in allowed for status in statuses):
-    raise SystemExit("Unsupported contract status in master manifest.")
-
-if not any(status == "PENDING_COMPILATION" for status in statuses):
-    raise SystemExit(
-        "Source commit rebinding is allowed only while at least one "
-        "replacement compilation is pending."
-    )
-
-manifest["source_repository"]["source_freeze_commit"] = commit
+source = manifest.get("source_repository", {})
+source["source_freeze_commit"] = EXPECTED_COMMIT
+source["source_freeze_record_commit"] = EXPECTED_RECORD_COMMIT
+source["source_manifest_sha256"] = EXPECTED_MANIFEST_SHA256
+manifest["source_repository"] = source
 
 atomic_write_json(manifest_path, manifest)
-atomic_write_text(
-    ROOT / "MASTER_COMPILATION_MANIFEST.md",
-    render_manifest_markdown(manifest),
-)
-
-print(f"Source freeze commit recorded: {commit}")
+atomic_write_text(ROOT / "MASTER_COMPILATION_MANIFEST.md", render_manifest_markdown(manifest))
+print(f"Revision 7.3 source binding verified: {EXPECTED_COMMIT}")

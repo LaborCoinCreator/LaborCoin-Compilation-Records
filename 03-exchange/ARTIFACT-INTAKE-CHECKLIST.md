@@ -1,4 +1,4 @@
-# Exchange V7.0.0 Artifact Intake
+# Exchange V7.1.0 Artifact Intake
 
 Compile `LaborCoinExchangeV7_Remix.sol` in Remix with the exact settings in `compiler-settings.json`.
 

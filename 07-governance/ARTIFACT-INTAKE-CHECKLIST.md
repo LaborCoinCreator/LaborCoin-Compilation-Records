@@ -1,12 +1,12 @@
-# Governance V15.1.1 Artifact Intake
+# Governance V16.0.0 Artifact Intake
 
-Compile `LaborCoinGovernanceV15_Remix.sol` in Remix with the exact settings in `compiler-settings.json`.
+Compile `LaborCoinGovernanceV16_Remix.sol` in Remix with the exact settings in `compiler-settings.json`.
 
 Save these three files directly in this folder using the exact names:
 
-- `LaborCoinGovernanceV15.json`
-- `LaborCoinGovernanceV15_metadata.json`
-- `LaborCoinGovernanceV15.build-info.json`
+- `LaborCoinGovernanceV16.json`
+- `LaborCoinGovernanceV16_metadata.json`
+- `LaborCoinGovernanceV16.build-info.json`
 
 Then run from the repository root:
 

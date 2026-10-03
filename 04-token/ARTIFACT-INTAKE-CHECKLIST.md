@@ -1,4 +1,4 @@
-# LABR V4.0.0 Artifact Intake
+# LABR V4.1.0 Artifact Intake
 
 Compile `LaborCoinV4_Remix.sol` in Remix with the exact settings in `compiler-settings.json`.
 

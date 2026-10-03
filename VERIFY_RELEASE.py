@@ -4,7 +4,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 
-print("Running Revision 7.2 source and manifest assurance tests...")
+print("Running Revision 7.3 source and manifest assurance tests...")
 tests = subprocess.run([sys.executable, str(ROOT / "run_python_tests.py")], cwd=ROOT)
 if tests.returncode:
     raise SystemExit(tests.returncode)
@@ -14,6 +14,6 @@ verification = subprocess.run([sys.executable, str(ROOT / "verify_master_compila
 if verification.returncode not in (0, 2):
     raise SystemExit(verification.returncode)
 if verification.returncode == 2:
-    print("Precompilation pending is expected while replacement compilation records remain outstanding.")
+    print("Precompilation pending is expected while official Revision 7.3 compilation records remain outstanding.")
 else:
-    print("All seven compilation records passed structural and cryptographic verification.")
+    print("All seven Revision 7.3 compilation records passed structural and cryptographic verification.")

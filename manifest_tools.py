@@ -160,11 +160,13 @@ def validate_compiler_input_source(
 
 def render_manifest_markdown(manifest: dict[str, Any]) -> str:
     lines = [
-        "# Revision 7.2 Master Compilation Manifest",
+        f"# {manifest.get('release', 'UNKNOWN')} Master Compilation Manifest",
         "",
         f"**Release status:** {manifest.get('status', 'UNKNOWN')}",
         f"**Artifact status:** {manifest.get('artifact_status', 'UNKNOWN')}",
         f"**Source freeze commit:** `{manifest.get('source_repository', {}).get('source_freeze_commit', 'UNRECORDED')}`",
+        f"**Source freeze record commit:** `{manifest.get('source_repository', {}).get('source_freeze_record_commit', 'UNRECORDED')}`",
+        f"**Source manifest SHA-256:** `{manifest.get('source_repository', {}).get('source_manifest_sha256', 'UNRECORDED')}`",
         "**Deployment authorization:** NONE",
         "",
         "| Order | Component | Folder | Compilation status |",

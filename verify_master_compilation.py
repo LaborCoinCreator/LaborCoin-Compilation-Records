@@ -23,6 +23,35 @@ manifest = load_json(manifest_path)
 failures: list[str] = []
 pending: list[str] = []
 
+EXPECTED_RELEASE = "LaborCoin Revision 7.3"
+EXPECTED_SOURCE_REPOSITORY = {
+    "url": "https://github.com/LaborCoinCreator/LaborCoin",
+    "release_path": "release/revision-7.3-source-freeze",
+    "source_manifest_sha256": "6afdeb3a44b227dcbe751a683fc6eb4b1e9190352e6e87a26717245ec8b3a05d",
+    "source_freeze_commit": "f5a1b200a6f703538b88319d5135b20f36dbae1c",
+    "source_freeze_record_commit": "660931b0272c30705274b71ea36d6f6b74a4a430",
+}
+
+if manifest.get("manifest_format_version") != 3:
+    failures.append("root: manifest_format_version must be 3")
+if manifest.get("release") != EXPECTED_RELEASE:
+    failures.append("root: release must be LaborCoin Revision 7.3")
+if manifest.get("source_repository") != EXPECTED_SOURCE_REPOSITORY:
+    failures.append("root: source_repository binding mismatch")
+
+profile_path = ROOT / "COMPILER_PROFILE.json"
+if not profile_path.is_file():
+    failures.append("root: missing COMPILER_PROFILE.json")
+else:
+    try:
+        profile = load_json(profile_path)
+        if manifest.get("compiler") != profile:
+            failures.append(
+                "root: master compiler profile differs from COMPILER_PROFILE.json"
+            )
+    except ValueError as exc:
+        failures.append("root: " + str(exc))
+
 
 def fail(folder: str, message: str) -> None:
     failures.append(f"{folder}: {message}")
@@ -78,6 +107,22 @@ for entry in contracts:
                 fail(folder_name, "SOURCE-RECORD.json contract mismatch")
             if source_record.get("expected_artifacts") != entry.get("artifacts"):
                 fail(folder_name, "SOURCE-RECORD.json artifact names mismatch")
+            expected_source_fields = {
+                "release": manifest.get("release"),
+                "order": entry.get("order"),
+                "folder": folder_name,
+                "contract": contract,
+                "version": entry.get("version"),
+                "source_sha256": entry.get("source_sha256"),
+                "remix_source_sha256": entry.get("remix_source_sha256"),
+                "compiler_settings_sha256": entry.get("compiler_settings_sha256"),
+            }
+            for key, expected_value in expected_source_fields.items():
+                if source_record.get(key) != expected_value:
+                    fail(
+                        folder_name,
+                        f"SOURCE-RECORD.json {key} mismatch",
+                    )
             forbidden_dynamic = {
                 "status", "artifact_sha256", "metadata_sha256", "build_info_sha256",
                 "creation_bytecode_keccak256", "runtime_template_keccak256", "compiler_diagnostics",
@@ -188,8 +233,12 @@ if failures:
     sys.exit(1)
 
 if pending:
+    if manifest.get("artifact_status") != "PARTIAL":
+        print("MASTER COMPILATION VERIFICATION: FAIL")
+        print("- root: pending compilations require artifact_status PARTIAL")
+        sys.exit(1)
     print("MASTER COMPILATION VERIFICATION: PRECOMPILATION PENDING")
-    print("Missing Revision 7.2 records:")
+    print("Missing Revision 7.3 records:")
     for contract in pending:
         print("-", contract)
     sys.exit(2)

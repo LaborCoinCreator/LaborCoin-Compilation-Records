@@ -49,11 +49,15 @@ parser.add_argument(
 args = parser.parse_args()
 
 manifest = load_json(MANIFEST_PATH)
-source_commit = manifest.get("source_repository", {}).get("source_freeze_commit", "")
-if not isinstance(source_commit, str) or len(source_commit) != 40 or any(ch not in "0123456789abcdef" for ch in source_commit.lower()):
-    raise SystemExit(
-        "Record the full LaborCoin source-freeze commit first: python set_source_commit.py <40-character-commit>"
-    )
+if manifest.get("release") != "LaborCoin Revision 7.3":
+    raise SystemExit("MASTER_COMPILATION_MANIFEST.json is not bound to LaborCoin Revision 7.3")
+source_repository = manifest.get("source_repository", {})
+if source_repository.get("source_freeze_commit") != "f5a1b200a6f703538b88319d5135b20f36dbae1c":
+    raise SystemExit("Revision 7.3 source-freeze commit binding mismatch")
+if source_repository.get("source_freeze_record_commit") != "660931b0272c30705274b71ea36d6f6b74a4a430":
+    raise SystemExit("Revision 7.3 source-freeze record commit binding mismatch")
+if source_repository.get("source_manifest_sha256") != "6afdeb3a44b227dcbe751a683fc6eb4b1e9190352e6e87a26717245ec8b3a05d":
+    raise SystemExit("Revision 7.3 source manifest SHA-256 binding mismatch")
 entry = next((item for item in manifest["contracts"] if item["folder"] == args.folder), None)
 if entry is None:
     raise SystemExit(f"Unknown component folder: {args.folder}")

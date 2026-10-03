@@ -1,4 +1,4 @@
-# Policy V1.0.1 Artifact Intake
+# Policy V1.1.1 Artifact Intake
 
 Compile `LaborCoinProposalTextPolicyV1_Remix.sol` in Remix with the exact settings in `compiler-settings.json`.
 

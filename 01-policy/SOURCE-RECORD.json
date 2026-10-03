@@ -1,6 +1,6 @@
 {
   "record_type": "SOURCE_FREEZE",
-  "release": "LaborCoin Revision 7.2",
+  "release": "LaborCoin Revision 7.3",
   "order": 1,
   "folder": "01-policy",
   "contract": "LaborCoinProposalTextPolicyV1",
