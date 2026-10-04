@@ -1,0 +1,21 @@
+{
+  "record_format_version": 2,
+  "status": "RECORDED_PREDEPLOYMENT",
+  "release": "LaborCoin Revision 7.3",
+  "contract": "LaborCoinGovernanceV16",
+  "version": "Governance V16.0.0",
+  "folder": "07-governance",
+  "source_sha256": "7214ad9ead43a000c18fb78ac13e8d427b83bdee705407cef3483238a7bcb9ab",
+  "remix_source_sha256": "aa70ef14b8a89385da56e9a91db3cb93e5b87388c3e339b946614575c21a1111",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "source_record_sha256": "417c93d1cf17145183a0942f09c0c4dd5dce2bc2515145a4413a572a8ef6c261",
+  "artifact_sha256": "3edb68dd92648122191e5e1bb4f41322fded29e035603f532897f75e0ccf0968",
+  "metadata_sha256": "0b5dcfd3afa1dd31dd01f174d185e0103280a7e72f10a0966a625f431b593415",
+  "build_info_sha256": "be1c4af91c60388a25c55e0d15c67755e73ebe52c7f8381e3b256ebe75d1336e",
+  "creation_bytecode_bytes": 27316,
+  "runtime_template_bytes": 21198,
+  "creation_bytecode_keccak256": "0xb16eb1cc05ac7281604460c326d5281135a77f81e6b60cc4c5f8991bde308db7",
+  "runtime_template_keccak256": "0x82757385e325514587044de7b6b370840f762908ebf0e67166dee510687f74b6",
+  "compiler_diagnostics": "ZERO_DIAGNOSTICS",
+  "diagnostics": []
+}

@@ -1,7 +1,7 @@
 # LaborCoin Revision 7.3 Master Compilation Manifest
 
 **Release status:** PRECOMPILATION_SOURCE_FREEZE
-**Artifact status:** PARTIAL
+**Artifact status:** RECORDED_PREDEPLOYMENT
 **Source freeze commit:** `f5a1b200a6f703538b88319d5135b20f36dbae1c`
 **Source freeze record commit:** `660931b0272c30705274b71ea36d6f6b74a4a430`
 **Source manifest SHA-256:** `6afdeb3a44b227dcbe751a683fc6eb4b1e9190352e6e87a26717245ec8b3a05d`
@@ -15,7 +15,7 @@
 | 4 | LABR V4.1.0 | `04-token` | RECORDED_PREDEPLOYMENT |
 | 5 | LaborVote V9.1.1 | `05-labrv` | RECORDED_PREDEPLOYMENT |
 | 6 | Registration V6.1.1 | `06-registration` | RECORDED_PREDEPLOYMENT |
-| 7 | Governance V16.0.0 | `07-governance` | PENDING_COMPILATION |
+| 7 | Governance V16.0.0 | `07-governance` | RECORDED_PREDEPLOYMENT |
 
 The JSON manifest is authoritative for exact hashes, artifact names, bytecode commitments, and compiler diagnostics.
 This Markdown file is generated from the JSON manifest and must not be edited independently.
