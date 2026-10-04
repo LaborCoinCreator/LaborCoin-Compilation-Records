@@ -99,17 +99,17 @@
         "build_info": "LaborCoinExchangeV7.build-info.json",
         "sealed_record": "LaborCoinExchangeV7-Compilation-Record.zip"
       },
-      "status": "PENDING_COMPILATION",
-      "artifact_sha256": "PENDING",
-      "metadata_sha256": "PENDING",
-      "build_info_sha256": "PENDING",
-      "compilation_record_sha256": "PENDING",
-      "sealed_record_sha256": "PENDING",
-      "creation_bytecode_bytes": "PENDING",
-      "runtime_template_bytes": "PENDING",
-      "creation_bytecode_keccak256": "PENDING",
-      "runtime_template_keccak256": "PENDING",
-      "compiler_diagnostics": "PENDING"
+      "status": "RECORDED_PREDEPLOYMENT",
+      "artifact_sha256": "e2216aecce4d6a7cc8b851c0d5479639acc6a1d06002a48e20e7e1487d92dcdd",
+      "metadata_sha256": "9ab84dbb5c17f7cf5b8d1a5e5f021b0d000d8ed4ca7091ea41f8100e0aec706b",
+      "build_info_sha256": "8ada25a4dac9a4cdedc12531a6006aa496793914a633b01236f123c4ffb061b4",
+      "compilation_record_sha256": "5a78502f2e6ded644c1204a2cee1d0492faf852ec41a65f08db32c8840d2ca45",
+      "sealed_record_sha256": "06553fbdc33a607f87ea35b2e16f8eaaabb9e839786cb562ca3bb19f5a90ed38",
+      "creation_bytecode_bytes": 12993,
+      "runtime_template_bytes": 10038,
+      "creation_bytecode_keccak256": "0x0698de035ce465ba760b0a2dac778c7a6fcb0f0e485c0253f00f97dd6c0408fb",
+      "runtime_template_keccak256": "0x34e17e91c900ec1ee5c5f66bd58cbab1ac204f2c6e1ac1e4b6572230c3f5b0ab",
+      "compiler_diagnostics": "ZERO_DIAGNOSTICS"
     },
     {
       "order": 4,

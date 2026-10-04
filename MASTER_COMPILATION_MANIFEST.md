@@ -11,7 +11,7 @@
 |---:|---|---|---|
 | 1 | Policy V1.1.1 | `01-policy` | RECORDED_PREDEPLOYMENT |
 | 2 | Identity Registry V1.0.1 | `02-identity-registry` | RECORDED_PREDEPLOYMENT |
-| 3 | Exchange V7.1.0 | `03-exchange` | PENDING_COMPILATION |
+| 3 | Exchange V7.1.0 | `03-exchange` | RECORDED_PREDEPLOYMENT |
 | 4 | LABR V4.1.0 | `04-token` | PENDING_COMPILATION |
 | 5 | LaborVote V9.1.1 | `05-labrv` | PENDING_COMPILATION |
 | 6 | Registration V6.1.1 | `06-registration` | PENDING_COMPILATION |

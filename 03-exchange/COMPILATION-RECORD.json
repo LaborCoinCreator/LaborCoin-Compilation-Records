@@ -1,0 +1,21 @@
+{
+  "record_format_version": 2,
+  "status": "RECORDED_PREDEPLOYMENT",
+  "release": "LaborCoin Revision 7.3",
+  "contract": "LaborCoinExchangeV7",
+  "version": "Exchange V7.1.0",
+  "folder": "03-exchange",
+  "source_sha256": "807267278cc4925d3307bc99abffb59fd8bd33e203bfa4c6c98b3098f1c8aa1a",
+  "remix_source_sha256": "c11ef108984d6ee69aaac4a655448e5f3ae72f0f5fcc5eec23ae01a4b81a00d8",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "source_record_sha256": "921b9956ff4324fd3ab8955365cb2b8c030be2a9c3c1fc44cabd1c18adaa530e",
+  "artifact_sha256": "e2216aecce4d6a7cc8b851c0d5479639acc6a1d06002a48e20e7e1487d92dcdd",
+  "metadata_sha256": "9ab84dbb5c17f7cf5b8d1a5e5f021b0d000d8ed4ca7091ea41f8100e0aec706b",
+  "build_info_sha256": "8ada25a4dac9a4cdedc12531a6006aa496793914a633b01236f123c4ffb061b4",
+  "creation_bytecode_bytes": 12993,
+  "runtime_template_bytes": 10038,
+  "creation_bytecode_keccak256": "0x0698de035ce465ba760b0a2dac778c7a6fcb0f0e485c0253f00f97dd6c0408fb",
+  "runtime_template_keccak256": "0x34e17e91c900ec1ee5c5f66bd58cbab1ac204f2c6e1ac1e4b6572230c3f5b0ab",
+  "compiler_diagnostics": "ZERO_DIAGNOSTICS",
+  "diagnostics": []
+}
