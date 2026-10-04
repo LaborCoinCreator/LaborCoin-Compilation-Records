@@ -1,0 +1,21 @@
+{
+  "record_format_version": 2,
+  "status": "RECORDED_PREDEPLOYMENT",
+  "release": "LaborCoin Revision 7.3",
+  "contract": "LaborVoteV9",
+  "version": "LaborVote V9.1.1",
+  "folder": "05-labrv",
+  "source_sha256": "669a8e59815c91608034ddc54cc35214190933550c4f45e1644c6dc98bdceda7",
+  "remix_source_sha256": "1e651254c28b5a5cc1aa5afc9c79eee86c97b05c3cde7c5c6092bc103d66cc79",
+  "compiler_settings_sha256": "57ea3e0ff3254a51f2195a9d8179e382982f5b441ffc8ac3709d8e29eea713d8",
+  "source_record_sha256": "01bab405b251e2df1de49d3e65978110feef4a098e64c7da46468d0a4421f062",
+  "artifact_sha256": "c2daf5e4dc4e7276208146fa227ab15763c1e37e6a69597a8978c87ad35d1938",
+  "metadata_sha256": "e9793c36d79bf093a5b91794ff5b596ad6af6a99eb7345de5fba018b4ca4cff6",
+  "build_info_sha256": "fcead247a733e526264457fd0c841b01e8e21be35818f6c28a6ec82b2946f9db",
+  "creation_bytecode_bytes": 5329,
+  "runtime_template_bytes": 4007,
+  "creation_bytecode_keccak256": "0x8c55fba1be1e971edb0af4bfdaf4ee64fa7843c01767fefc8c8488e5dbe36c41",
+  "runtime_template_keccak256": "0xe133ab6bad39dbb49085a874e1c3457a24940c2ac50428d848bee1651f95dd5e",
+  "compiler_diagnostics": "ZERO_DIAGNOSTICS",
+  "diagnostics": []
+}

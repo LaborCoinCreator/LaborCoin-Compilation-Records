@@ -153,17 +153,17 @@
         "build_info": "LaborVoteV9.build-info.json",
         "sealed_record": "LaborVoteV9-Compilation-Record.zip"
       },
-      "status": "PENDING_COMPILATION",
-      "artifact_sha256": "PENDING",
-      "metadata_sha256": "PENDING",
-      "build_info_sha256": "PENDING",
-      "compilation_record_sha256": "PENDING",
-      "sealed_record_sha256": "PENDING",
-      "creation_bytecode_bytes": "PENDING",
-      "runtime_template_bytes": "PENDING",
-      "creation_bytecode_keccak256": "PENDING",
-      "runtime_template_keccak256": "PENDING",
-      "compiler_diagnostics": "PENDING"
+      "status": "RECORDED_PREDEPLOYMENT",
+      "artifact_sha256": "c2daf5e4dc4e7276208146fa227ab15763c1e37e6a69597a8978c87ad35d1938",
+      "metadata_sha256": "e9793c36d79bf093a5b91794ff5b596ad6af6a99eb7345de5fba018b4ca4cff6",
+      "build_info_sha256": "fcead247a733e526264457fd0c841b01e8e21be35818f6c28a6ec82b2946f9db",
+      "compilation_record_sha256": "fb3b1e8c85fd367e1058ba28ec82833de076eb138b1ae9dae1d6002fc7806cbf",
+      "sealed_record_sha256": "3d0a063f4d6a6eb0e790fdb506486ee6dde9d63df710082a81058834045e3966",
+      "creation_bytecode_bytes": 5329,
+      "runtime_template_bytes": 4007,
+      "creation_bytecode_keccak256": "0x8c55fba1be1e971edb0af4bfdaf4ee64fa7843c01767fefc8c8488e5dbe36c41",
+      "runtime_template_keccak256": "0xe133ab6bad39dbb49085a874e1c3457a24940c2ac50428d848bee1651f95dd5e",
+      "compiler_diagnostics": "ZERO_DIAGNOSTICS"
     },
     {
       "order": 6,
